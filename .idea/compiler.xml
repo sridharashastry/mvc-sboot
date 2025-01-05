@@ -8,14 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hworld-web" />
-        <module name="di-autowire" />
-        <module name="hworld" />
         <module name="jpa-insert-data-onstart" />
         <module name="di" />
         <module name="jpa-search-with-jpql" />
-        <module name="jpa-cmd-runner-curl-fire" />
         <module name="jpa-insert-image-onstart" />
         <module name="interceptor" />
+        <module name="jpa-search-with-jpaspecification" />
+        <module name="di-autowire" />
+        <module name="hworld" />
+        <module name="jpa-cmd-runner-curl-fire" />
         <module name="jpa-addl-update-apis" />
         <module name="web-mvc" />
         <module name="jpa-image-add-retrieve" />
@@ -37,6 +38,7 @@
       <module name="jpa-image-add-retrieve" options="-parameters" />
       <module name="jpa-insert-data-onstart" options="-parameters" />
       <module name="jpa-insert-image-onstart" options="-parameters" />
+      <module name="jpa-search-with-jpaspecification" options="-parameters" />
       <module name="jpa-search-with-jpql" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
