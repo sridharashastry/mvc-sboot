@@ -61,7 +61,7 @@ public class GetCountryController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Country with ID " + countryId + " not found.");
         } else {
 
-            Country countryForLogging = new Country(country.getCountryId(), country.getCountryCode(), country.getCountryName(), country.getImageName(), country.getImageType(), "[MASKED]".getBytes());
+            Country countryForLogging = new Country(country.getCountryId(), country.getCountryCode(), country.getCountryName(), country.getImageName(), country.getImageType(), "[MASKED]".getBytes(),country.getPopulation());
 
             System.out.println("[Controller] - Returning country: " + countryForLogging);
 

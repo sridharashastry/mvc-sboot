@@ -48,7 +48,7 @@ public class GetCountryController {
     //curl -i -X GET http://localhost:8080/countries/1
     //We can use annotation @GetMapping if we want explicitly define a get.
     @GetMapping("/countries/{countryId}")
-    public ResponseEntity<Object> getCountryById(@PathVariable String countryId) {
+    public ResponseEntity<Object> getCountryById(@PathVariable int countryId) {
 
         System.out.println("[Controller] - Fetching country by countryId: " + countryId);
 
@@ -61,7 +61,7 @@ public class GetCountryController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Country with ID " + countryId + " not found.");
         } else {
 
-            Country countryForLogging = new Country(country.getCountryId(), country.getCountryCode(), country.getCountryName(), country.getImageName(), country.getImageType(), "[MASKED]".getBytes());
+            Country countryForLogging = new Country(country.getCountryId(), country.getCountryCode(), country.getCountryName(), country.getImageName(), country.getImageType(), "[MASKED]".getBytes(),country.getPopulation());
 
             System.out.println("[Controller] - Returning country: " + countryForLogging);
 
@@ -86,7 +86,7 @@ public class GetCountryController {
 
 
     @GetMapping("/countries/{countryId}/image-base64")
-    public ResponseEntity<?> getImageInBase64(@PathVariable String countryId) throws JsonProcessingException {
+    public ResponseEntity<?> getImageInBase64(@PathVariable int countryId) throws JsonProcessingException {
         Country country = countryService.getCountryById(countryId);
         if (country == null || country.getCountryImage() == null) {
             return ResponseEntity.notFound().build();
@@ -133,7 +133,7 @@ public class GetCountryController {
 
 
     @GetMapping("/countries/{countryId}/image")
-    public ResponseEntity<byte[]> getImage(@PathVariable String countryId) {
+    public ResponseEntity<byte[]> getImage(@PathVariable int countryId) {
         Country country = countryService.getCountryById(countryId);
         if (country == null || country.getCountryImage() == null) {
             return ResponseEntity.notFound().build();

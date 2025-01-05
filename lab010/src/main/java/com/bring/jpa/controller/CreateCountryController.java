@@ -50,11 +50,9 @@ public class CreateCountryController {
 
 
 
-    //Below leaving the image and json paths intentionally as lab008 as in the lab009, it is removed
+   // curl -i -X POST -H "Content-Type: multipart/form-data" -F "country=@C:/ws/sboot/lab010/IN-country-data.json;type=application/json" -F "image=@C:/ws/sboot/lab010/IN-country-image.png" http://localhost:8080/country-with-image
 
-   // curl -i -X POST -H "Content-Type: multipart/form-data" -F "country=@C:/ws/sboot/lab008/IN-country-data.json;type=application/json" -F "image=@C:/ws/sboot/lab008/IN-country-image.png" http://localhost:8080/country-with-image
-
-    // curl -i -X POST -H "Content-Type: multipart/form-data" -F "country=@C:/ws/sboot/lab008/PT-country-data.json;type=application/json" -F "image=@C:/ws/sboot/lab008/PT-country-image.png" http://localhost:8080/country-with-image
+    // curl -i -X POST -H "Content-Type: multipart/form-data" -F "country=@C:/ws/sboot/lab010/PT-country-data.json;type=application/json" -F "image=@C:/ws/sboot/lab010/PT-country-image.png" http://localhost:8080/country-with-image
 
     //important: ensure two files are available at designated places.
     //one : xx-country-data.json
