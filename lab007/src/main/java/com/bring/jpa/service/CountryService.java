@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -24,30 +26,17 @@ public class CountryService {
     public List<Country> getCountries(){
 
 
-        List<Country> countries = countryRepository.findAll();
-        System.out.println("[Service] - Returning list of countries");
-        System.out.println(countries);
-        return countries;
+        return countryRepository.findAll();
 
     }
 
 
-    public Country getCountryById( String countryId){
+    public Country getCountryById(String countryId) {
 
-
-        Country country = countryRepository.findById(countryId).orElse(new Country());
-
-        System.out.println("[Service] - Returning country: "+country);
-
-        return country;
-
-
+        return countryRepository.findById(countryId).orElse(new Country());
     }
-
 
     public String addCountry(Country country){
-
-        System.out.println("[Service] - Adding country : "+country);
 
         countryRepository.save(country);
         return "Country "+country+" Saved";
@@ -56,7 +45,6 @@ public class CountryService {
 
 
     public void updateCountryById(String countryId, Country updatedCountry) {
-        System.out.println("[Service] - Updating country using countryId: " + countryId);
 
         Optional<Country> existingCountry = countryRepository.findById(countryId);
 
@@ -71,7 +59,6 @@ public class CountryService {
 
 
     public String deleteCountryById(String countryId) {
-        System.out.println("[Service] - Deleting country with code: " + countryId);
 
         if (!countryRepository.existsById(countryId)) {
             return "Country with countryId " + countryId + " not found";
@@ -81,4 +68,13 @@ public class CountryService {
         return "Country with countryId" + countryId + " Deleted";
     }
 
+    public Country addCountryWithImage(Country country, MultipartFile image) throws IOException {
+
+        country.setImageName(image.getOriginalFilename());
+        country.setImageType(image.getContentType());
+        country.setCountryImage(image.getBytes());
+
+        return countryRepository.save(country);
+
+    }
 }

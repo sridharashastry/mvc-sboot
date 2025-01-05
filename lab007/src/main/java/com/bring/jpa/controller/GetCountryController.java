@@ -59,11 +59,48 @@ public class GetCountryController {
                 (country.getCountryCode() == null && country.getCountryName() == null)) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Country with ID " + countryId + " not found.");
         } else {
+
+            Country countryForLogging = new Country(country.getCountryId(), country.getCountryCode(), country.getCountryName(), country.getImageName(), country.getImageType(), "[MASKED]".getBytes());
+
+            System.out.println("[Controller] - Returning country: " + countryForLogging);
+
             return ResponseEntity.ok(country);
         }
     }
 
 
 
+
+    ////////////////////READ-SINGLE-BUT-ONLY-IMAGE///////////////////////////////////
+
+
+
+    //curl -i -X GET http://localhost:8080/countries/5/image
+
+
+    @GetMapping("/countries/{countryId}/image")
+    public ResponseEntity<byte[]> getImage(@PathVariable String countryId) {
+        Country country = countryService.getCountryById(countryId);
+        if (country == null || country.getCountryImage() == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        // Extract image type from imageName (assuming imageName is like "image.png")
+        String imageType = extractImageTypeFromFileName(country.getImageName());
+
+        return ResponseEntity.ok()
+                .header("Content-Type", imageType)
+                .body(country.getCountryImage());
+    }
+
+    // Helper method to extract image type from filename
+    private String extractImageTypeFromFileName(String fileName) {
+        int lastDotIndex = fileName.lastIndexOf(".");
+        if (lastDotIndex != -1) {
+            return "image/" + fileName.substring(lastDotIndex + 1);
+        } else {
+            return "image/unknown";
+        }
+    }
 
 }

@@ -6,9 +6,13 @@ import com.bring.jpa.service.CountryService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Arrays;
+import java.util.Base64;
 import java.util.List;
 
 @CrossOrigin
@@ -41,6 +45,49 @@ public class CreateCountryController {
         String response = countryService.addCountry(country);
         return ResponseEntity.ok()
                 .body(response);
+    }
+
+
+
+
+   // curl -i -X POST -H "Content-Type: multipart/form-data" -F "country=@C:/ws/sboot/lab007/country.json;type=application/json" -F "image=@C:/ws/sboot/lab007/india.png" http://localhost:8080/country-with-image
+
+    //important: ensure two files are available at designated places.
+    //one : country.json
+    //two : png file
+
+
+    @PostMapping("/country-with-image")
+    public ResponseEntity<?> addCountryWithImage(@RequestPart Country country, @RequestPart MultipartFile image) throws Exception {
+
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String countryJson = objectMapper.writeValueAsString(country);
+
+        System.out.println("[Controller] - Adding country : " + countryJson);
+
+        // Convert image data to Base64 for logging
+        String imageBase64 = Base64.getEncoder().encodeToString(image.getBytes());
+        String maskedImageBase64 = imageBase64.replaceAll("(?<=.{10}).*", "...");
+        System.out.println("[Controller] - Image Data (Base64): " + maskedImageBase64);
+        System.out.println("[Controller] - Image FileName :" + image.getOriginalFilename());
+        System.out.println("[Controller] - Image Type :" + image.getContentType());
+
+
+
+
+        try{
+            Country c=countryService.addCountryWithImage(country,image);
+            return new ResponseEntity<>(c,HttpStatus.CREATED);
+
+        }catch (Exception e){
+
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
+
+        }
+
+
+
     }
 
 
