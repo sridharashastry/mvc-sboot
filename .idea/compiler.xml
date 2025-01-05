@@ -8,14 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hworld-web" />
-        <module name="jpa-commandrunner" />
         <module name="di-autowire" />
         <module name="hworld" />
-        <module name="jpa-startupsqlload" />
+        <module name="jpa-insert-data-onstart" />
         <module name="di" />
+        <module name="jpa-cmd-runner-curl-fire" />
+        <module name="jpa-insert-image-onstart" />
         <module name="interceptor" />
         <module name="web-mvc" />
-        <module name="jpa-startupsqlload-images" />
+        <module name="jpa-image-add-retrieve" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,9 +30,10 @@
       <module name="hworld" options="-parameters" />
       <module name="hworld-web" options="-parameters" />
       <module name="interceptor" options="-parameters" />
-      <module name="jpa-commandrunner" options="-parameters" />
-      <module name="jpa-startupsqlload" options="-parameters" />
-      <module name="jpa-startupsqlload-images" options="-parameters" />
+      <module name="jpa-cmd-runner-curl-fire" options="-parameters" />
+      <module name="jpa-image-add-retrieve" options="-parameters" />
+      <module name="jpa-insert-data-onstart" options="-parameters" />
+      <module name="jpa-insert-image-onstart" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>

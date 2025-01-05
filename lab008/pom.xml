@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bring</groupId>
-	<artifactId>jpa-startupsqlload-images</artifactId>
+	<artifactId>jpa-image-add-retrieve</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>jpa</name>
 	<description>JPA Integration</description>
