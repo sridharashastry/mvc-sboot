@@ -15,6 +15,7 @@
         <module name="di" />
         <module name="interceptor" />
         <module name="web-mvc" />
+        <module name="jpa-startupsqlload-images" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="interceptor" options="-parameters" />
       <module name="jpa-commandrunner" options="-parameters" />
       <module name="jpa-startupsqlload" options="-parameters" />
+      <module name="jpa-startupsqlload-images" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>

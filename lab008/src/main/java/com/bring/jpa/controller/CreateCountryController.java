@@ -25,6 +25,7 @@ public class CreateCountryController {
 
     //Data is automatically loaded using the data.sql that is part of resources.
     //there is a spring configuration as well that delays the insert queries.
+    //Note the data is loaded 'without images'
 
     /*
     Below are the curl just in case if we want to load manually.
@@ -46,6 +47,54 @@ public class CreateCountryController {
         return ResponseEntity.ok()
                 .body(response);
     }
+
+
+
+
+   // curl -i -X POST -H "Content-Type: multipart/form-data" -F "country=@C:/ws/sboot/lab008/IN-country-data.json;type=application/json" -F "image=@C:/ws/sboot/lab008/IN-country-image.png" http://localhost:8080/country-with-image
+
+    // curl -i -X POST -H "Content-Type: multipart/form-data" -F "country=@C:/ws/sboot/lab008/PT-country-data.json;type=application/json" -F "image=@C:/ws/sboot/lab008/PT-country-image.png" http://localhost:8080/country-with-image
+
+    //important: ensure two files are available at designated places.
+    //one : xx-country-data.json
+    //two : xx-country-image.png
+
+
+    @PostMapping("/country-with-image")
+    public ResponseEntity<?> addCountryWithImage(@RequestPart Country country, @RequestPart MultipartFile image) throws Exception {
+
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String countryJson = objectMapper.writeValueAsString(country);
+
+        System.out.println("[Controller] - Adding country : " + countryJson);
+
+        // Convert image data to Base64 for logging
+        String imageBase64 = Base64.getEncoder().encodeToString(image.getBytes());
+        String maskedImageBase64 = imageBase64.replaceAll("(?<=.{10}).*", "...");
+        System.out.println("[Controller] - Image Data (Base64): " + maskedImageBase64);
+        System.out.println("[Controller] - Image FileName :" + image.getOriginalFilename());
+        System.out.println("[Controller] - Image Type :" + image.getContentType());
+
+
+
+
+        try{
+            Country c=countryService.addCountryWithImage(country,image);
+            return new ResponseEntity<>(c,HttpStatus.CREATED);
+
+        }catch (Exception e){
+
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
+
+        }
+
+
+
+    }
+
+
+
 
 
 

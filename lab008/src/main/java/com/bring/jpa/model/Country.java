@@ -16,6 +16,10 @@ public class Country {
     private String countryCode;
     private String countryName;
 
+    private String imageName;
+    private String imageType;
+    @Lob
+    private byte[] countryImage;
 
 
 

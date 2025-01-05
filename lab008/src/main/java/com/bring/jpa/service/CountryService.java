@@ -68,4 +68,13 @@ public class CountryService {
         return "Country with countryId" + countryId + " Deleted";
     }
 
+    public Country addCountryWithImage(Country country, MultipartFile image) throws IOException {
+
+        country.setImageName(image.getOriginalFilename());
+        country.setImageType(image.getContentType());
+        country.setCountryImage(image.getBytes());
+
+        return countryRepository.save(country);
+
+    }
 }
