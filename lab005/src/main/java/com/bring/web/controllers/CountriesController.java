@@ -24,7 +24,7 @@ public class CountriesController {
     @RequestMapping("/countries")
     public List<Country> getCountries(){
 
-        System.out.println("[Controller] - Fetching list of countries");
+        System.out.println("[controllers] - Fetching list of countries");
 
         return countryService.getCountries();
 
@@ -36,7 +36,7 @@ public class CountriesController {
 
     @RequestMapping("/countrieswithheaders")
     public ResponseEntity<List<Country>> getCountrieswithheaders() {
-        System.out.println("[Controller] - Fetching list of countries");
+        System.out.println("[controllers] - Fetching list of countries");
         List<Country> countries = countryService.getCountries();
         return ResponseEntity.ok()
                 .header("conversationid", "1111")
@@ -49,7 +49,7 @@ public class CountriesController {
     @GetMapping("/countries/{countryCode}")
     public Country getCountryById(@PathVariable  String countryCode){
 
-        System.out.println("[Controller] - Fetching country by code: "+countryCode);
+        System.out.println("[controllers] - Fetching country by code: "+countryCode);
 
         return countryService.getCountryById(countryCode);
     }
@@ -61,7 +61,7 @@ public class CountriesController {
     @PostMapping("/countries")
     public String addCountry(@RequestBody Country country){
 
-        System.out.println("[Controller] - Adding country : "+country);
+        System.out.println("[controllers] - Adding country : "+country);
 
         return countryService.addCountry(country);
     }
@@ -76,13 +76,13 @@ curl -X PUT -H "Content-Type: application/json" -d '{"name":"Portugal Updated","
 
     @DeleteMapping("/countries/{countryCode}")
     public String deleteCountryById(@PathVariable String countryCode) {
-        System.out.println("[Controller] - Deleting country by code: " + countryCode);
+        System.out.println("[controllers] - Deleting country by code: " + countryCode);
         return countryService.deleteCountryById(countryCode);
     }
 
     @PutMapping("/countries/{countryCode}")
     public String updateCountryById(@PathVariable String countryCode, @RequestBody Country updatedCountry) {
-        System.out.println("[Controller] - Updating country by code: " + countryCode);
+        System.out.println("[controllers] - Updating country by code: " + countryCode);
         return countryService.updateCountryById(countryCode, updatedCountry);
     }
 

@@ -16,7 +16,7 @@ public class CustomInterceptor implements HandlerInterceptor {
 
 
 
-    // Pre-handle method to perform any action before the request reaches the controller
+    // Pre-handle method to perform any action before the request reaches the controllers
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("[Interceptor] ---------------------------------------------------------------------------------------");
@@ -25,7 +25,7 @@ public class CustomInterceptor implements HandlerInterceptor {
         return true;
     }
 
-    // Post-handle method to perform any action after the controller has processed the request
+    // Post-handle method to perform any action after the controllers has processed the request
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, org.springframework.web.servlet.ModelAndView modelAndView) throws Exception {
         System.out.println("[Interceptor] - Post-handle method: Response status -> " + response.getStatus());

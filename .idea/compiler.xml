@@ -8,22 +8,29 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hworld-web" />
+        <module name="spring-security-csrf" />
         <module name="jpa-insert-data-onstart" />
         <module name="di" />
         <module name="jpa-search-with-jpql" />
         <module name="jpa-insert-image-onstart" />
         <module name="interceptor" />
+        <module name="jpa-cmd-runner-curl-fire-CORS" />
         <module name="jpa-search-with-jpaspecification" />
+        <module name="spring-sec-user-principal-hdcoded-inmem" />
         <module name="di-autowire" />
+        <module name="spring-security-default-creds" />
         <module name="hworld" />
-        <module name="jpa-cmd-runner-curl-fire" />
         <module name="jpa-addl-update-apis" />
+        <module name="spring-security-custom-creds" />
         <module name="web-mvc" />
         <module name="jpa-image-add-retrieve" />
+        <module name="spring-security-disable-csrf" />
+        <module name="spring-sec-user-principal-dbdriven" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="lab001-DI" target="17" />
+      <module name="spring-sec-user-principal-h2db" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,13 +41,20 @@
       <module name="hworld-web" options="-parameters" />
       <module name="interceptor" options="-parameters" />
       <module name="jpa-addl-update-apis" options="-parameters" />
-      <module name="jpa-cmd-runner-curl-fire" options="-parameters" />
+      <module name="jpa-cmd-runner-curl-fire-CORS" options="-parameters" />
       <module name="jpa-image-add-retrieve" options="-parameters" />
       <module name="jpa-insert-data-onstart" options="-parameters" />
       <module name="jpa-insert-image-onstart" options="-parameters" />
       <module name="jpa-search-with-jpaspecification" options="-parameters" />
       <module name="jpa-search-with-jpql" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
+      <module name="spring-sec-user-principal-dbdriven" options="-parameters" />
+      <module name="spring-sec-user-principal-h2db" options="-parameters" />
+      <module name="spring-sec-user-principal-hdcoded-inmem" options="-parameters" />
+      <module name="spring-security-csrf" options="-parameters" />
+      <module name="spring-security-custom-creds" options="-parameters" />
+      <module name="spring-security-default-creds" options="-parameters" />
+      <module name="spring-security-disable-csrf" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>
   </component>

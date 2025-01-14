@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bring</groupId>
-	<artifactId>jpa-cmd-runner-curl-fire</artifactId>
+	<artifactId>jpa-cmd-runner-curl-fire-CORS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>jpa</name>
 	<description>JPA Integration</description>
