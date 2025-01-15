@@ -25,6 +25,7 @@
         <module name="web-mvc" />
         <module name="jpa-image-add-retrieve" />
         <module name="spring-security-disable-csrf" />
+        <module name="spring-sec-user-principal-bcrypt" />
         <module name="spring-sec-user-principal-dbdriven" />
       </profile>
     </annotationProcessing>
@@ -48,6 +49,7 @@
       <module name="jpa-search-with-jpaspecification" options="-parameters" />
       <module name="jpa-search-with-jpql" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
+      <module name="spring-sec-user-principal-bcrypt" options="-parameters" />
       <module name="spring-sec-user-principal-dbdriven" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
       <module name="spring-sec-user-principal-hdcoded-inmem" options="-parameters" />
