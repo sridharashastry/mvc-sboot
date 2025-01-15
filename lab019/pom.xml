@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bring</groupId>
-	<artifactId>spring-sec-user-principal-bcrypt</artifactId>
+	<artifactId>security-user-principal-bcrypt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lab019</name>
 	<description>spring-sec-user-principal-bcrypt</description>

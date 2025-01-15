@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bring</groupId>
-	<artifactId>spring-sec-user-principal-hdcoded-inmem</artifactId>
+	<artifactId>security-user-principal-hdcoded-inmem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lab016</name>
 	<description>spring-security-user-principal</description>

@@ -8,25 +8,30 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hworld-web" />
-        <module name="spring-security-csrf" />
-        <module name="jpa-insert-data-onstart" />
+        <module name="security-custom-creds" />
+        <module name="security-jwt-login-staticjwt-w-jwtsvc" />
+        <module name="security-disable-csrf" />
         <module name="di" />
         <module name="jpa-search-with-jpql" />
-        <module name="jpa-insert-image-onstart" />
         <module name="interceptor" />
         <module name="jpa-cmd-runner-curl-fire-CORS" />
         <module name="jpa-search-with-jpaspecification" />
-        <module name="spring-sec-user-principal-hdcoded-inmem" />
-        <module name="di-autowire" />
-        <module name="spring-security-default-creds" />
         <module name="hworld" />
+        <module name="security-user-principal-bcrypt" />
+        <module name="security-user-principal-dbdriven" />
+        <module name="security-with-jwt-disable-basic-auth" />
+        <module name="security-default-creds" />
+        <module name="security-user-principal-hdcoded-inmem" />
+        <module name="security-jwt-login-dyna-jget-jwt" />
+        <module name="jpa-insert-data-onstart" />
+        <module name="jpa-insert-image-onstart" />
+        <module name="security-jwt-login-static-resp-wo-jwtsvc" />
+        <module name="security-csrf" />
+        <module name="di-autowire" />
         <module name="jpa-addl-update-apis" />
-        <module name="spring-security-custom-creds" />
         <module name="web-mvc" />
         <module name="jpa-image-add-retrieve" />
-        <module name="spring-security-disable-csrf" />
-        <module name="spring-sec-user-principal-bcrypt" />
-        <module name="spring-sec-user-principal-dbdriven" />
+        <module name="security-jwt-login-verify-jwt" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -49,14 +54,19 @@
       <module name="jpa-search-with-jpaspecification" options="-parameters" />
       <module name="jpa-search-with-jpql" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
-      <module name="spring-sec-user-principal-bcrypt" options="-parameters" />
-      <module name="spring-sec-user-principal-dbdriven" options="-parameters" />
+      <module name="security-csrf" options="-parameters" />
+      <module name="security-custom-creds" options="-parameters" />
+      <module name="security-default-creds" options="-parameters" />
+      <module name="security-disable-csrf" options="-parameters" />
+      <module name="security-jwt-login-dyna-jget-jwt" options="-parameters" />
+      <module name="security-jwt-login-static-resp-wo-jwtsvc" options="-parameters" />
+      <module name="security-jwt-login-staticjwt-w-jwtsvc" options="-parameters" />
+      <module name="security-jwt-login-verify-jwt" options="-parameters" />
+      <module name="security-user-principal-bcrypt" options="-parameters" />
+      <module name="security-user-principal-dbdriven" options="-parameters" />
+      <module name="security-user-principal-hdcoded-inmem" options="-parameters" />
+      <module name="security-with-jwt-disable-basic-auth" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
-      <module name="spring-sec-user-principal-hdcoded-inmem" options="-parameters" />
-      <module name="spring-security-csrf" options="-parameters" />
-      <module name="spring-security-custom-creds" options="-parameters" />
-      <module name="spring-security-default-creds" options="-parameters" />
-      <module name="spring-security-disable-csrf" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>
   </component>

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bring</groupId>
-	<artifactId>spring-security-custom-creds</artifactId>
+	<artifactId>security-custom-creds</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lab014</name>
 	<description>SpringSecurityWithCustomCreds</description>

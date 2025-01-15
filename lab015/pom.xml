@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bring</groupId>
-	<artifactId>spring-security-csrf</artifactId>
+	<artifactId>security-csrf</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lab014</name>
 	<description>spring-security-csrf</description>
