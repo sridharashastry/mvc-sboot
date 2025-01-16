@@ -27,6 +27,7 @@
         <module name="jpa-insert-data-onstart" />
         <module name="jpa-insert-image-onstart" />
         <module name="security-jwt-login-static-resp-wo-jwtsvc" />
+        <module name="security-with-keycloak-failure-resp" />
         <module name="security-csrf" />
         <module name="di-autowire" />
         <module name="security-with-jwt-disable-basic-auth (1)" />
@@ -70,6 +71,7 @@
       <module name="security-with-jwt-disable-basic-auth" options="-parameters" />
       <module name="security-with-jwt-disable-basic-auth (1)" options="-parameters" />
       <module name="security-with-keycloak" options="-parameters" />
+      <module name="security-with-keycloak-failure-resp" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>
