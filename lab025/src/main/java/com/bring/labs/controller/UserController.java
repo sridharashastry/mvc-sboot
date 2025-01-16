@@ -18,28 +18,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    //this endpoint also uses same pattern
 
-    //root user is loaded by default with already hashed password in h2db
-    //look for data.sql
-
-
-    //curl -i -X GET http://localhost:8080/users -u root:root
-
-
-    /*
-
-    on application start, spring automatically inserts this into db
-
-    this is hashed password using online bcrypt website with 'stregnth:10'
-    INSERT INTO Auth_User (name, password)
-VALUES
-    ('root', '$2a$10$YzElQLekXbCSrr.TR3mSaeKwBrV2UJasjYvT6FWUOc4WG2F8wMrmC');
-
-
-     */
     @RequestMapping("/users")
     public List<AuthUser> getUsers() {
-        System.out.println("[controllers] - Fetching list of users");
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
+
+
         return userService.getUsers();
 
     }
@@ -48,6 +33,8 @@ VALUES
    // curl -i -X POST "http://localhost:8080/register" -H "Content-Type: application/json" -d '{"name":"user1","password":"user1"}' -u root:root
     @PostMapping("/register")
     public AuthUser register(@RequestBody AuthUser authUser){
+
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
 
         return userService.register(authUser);
 
@@ -58,6 +45,8 @@ VALUES
     // curl -i -X POST "http://localhost:8080/login" -H "Content-Type: application/json" -d '{"name":"root","password":"root"}'
     @PostMapping("/login")
     public String login(@RequestBody AuthUser authUser){
+
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
 
 
         System.out.println("Incoming user : "+authUser);

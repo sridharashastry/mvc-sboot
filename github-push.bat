@@ -17,3 +17,5 @@ goto end
 
 :end
 echo Operation complete.
+echo Press any key to exit...
+pause >nul

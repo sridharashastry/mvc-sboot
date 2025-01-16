@@ -27,6 +27,9 @@ public class JWTService {
 
     public JWTService(){
 
+        System.out.println("\n [BringLabs] Entered (constructor) :JWTService \n ");
+
+
 
         try {
             KeyGenerator keyGen = KeyGenerator.getInstance("HmacSHA256");
@@ -44,6 +47,8 @@ public class JWTService {
     public String generateToken(String username) {
 
 
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
+
         Map<String, Object> claims = new HashMap<>();
 
         return Jwts.builder()
@@ -59,8 +64,7 @@ public class JWTService {
 
 
 
-        //return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6InJvb3QiLCJpYXQiOjE1MTYyMzkwMjJ9.FbUsFDKoxwS8RT1TZI_2OYTbW9Qq_NbSxOWlGTsOVvI";
-    }
+           }
 
 
     private SecretKey getKey(){

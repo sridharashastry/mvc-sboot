@@ -18,8 +18,7 @@ public class AuthService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        System.out.println("[bringlabs]-Entered AuthService class. Custom implementation of a service ");
-
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
 
 
         System.out.println("Incoming username: " + username);

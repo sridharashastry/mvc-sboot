@@ -36,7 +36,7 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 
-        System.out.println("[bringlabs]-Entered SecurityFilterChain interface. Custom implementation ");
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
 
 
         return http
@@ -66,8 +66,7 @@ public class SecurityConfiguration {
     @Bean
     public AuthenticationProvider authenticationProvider(){
 
-        System.out.println("[bringlabs]-Entered AuthenticationProvider interface. Custom implementation ");
-
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
 
 
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
@@ -82,8 +81,7 @@ public class SecurityConfiguration {
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
 
-        System.out.println("[bringlabs]-Entered AuthenticationManager. Custom implementation ");
-
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
 
         return  config.getAuthenticationManager();
 

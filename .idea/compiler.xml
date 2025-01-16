@@ -28,6 +28,7 @@
         <module name="security-jwt-login-static-resp-wo-jwtsvc" />
         <module name="security-csrf" />
         <module name="di-autowire" />
+        <module name="security-with-jwt-disable-basic-auth (1)" />
         <module name="jpa-addl-update-apis" />
         <module name="web-mvc" />
         <module name="jpa-image-add-retrieve" />
@@ -66,6 +67,7 @@
       <module name="security-user-principal-dbdriven" options="-parameters" />
       <module name="security-user-principal-hdcoded-inmem" options="-parameters" />
       <module name="security-with-jwt-disable-basic-auth" options="-parameters" />
+      <module name="security-with-jwt-disable-basic-auth (1)" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>

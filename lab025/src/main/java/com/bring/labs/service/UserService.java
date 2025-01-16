@@ -34,6 +34,8 @@ public class UserService {
 
     public AuthUser register (AuthUser authUser){
 
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
+
 
         authUser.setPassword(encoder.encode(authUser.getPassword()));
         return userRepository.save(authUser);
@@ -46,6 +48,8 @@ public class UserService {
 
 
     public String verify(AuthUser authUser) {
+
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
 
         Authentication authentication=
                 authenticationManager

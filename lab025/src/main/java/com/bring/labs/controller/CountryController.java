@@ -16,13 +16,15 @@ public class CountryController {
 
 
 
-    //  curl -i -X GET "http://localhost:8080/countries" -u root:root     /// this is loaded at startup using the 'data.sql' where root: 'hashed password' is stored'
+    //  curl -i -X GET "http://localhost:8080/countries" -u root:root     /// Given the application is now JWT enabled, this will not work.
 
     /*
 
 
-    curl -i -X GET "http://localhost:8080/countries" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb290IiwiaWF0IjoxNzM2OTY5OTEwLCJleHAiOjE3MzY5NzAwMTh9.dr5DArr
-eXfWz1xum6G3OQWKW6QggdE9yK2wW4twQiGQ"
+Step 1 : Fetch Token
+    curl -i -X POST "http://localhost:8080/login" -H "Content-Type: application/json" -d '{"name":"root","password":"root"}'
+Step 2 : Use the token and invoke second api
+    curl -i -X GET "http://localhost:8080/countries" -H "Authorization: Bearer xxxxxxxxxxtoken-fetchedxxxxxxxxx"
 
 
      */
@@ -32,7 +34,7 @@ eXfWz1xum6G3OQWKW6QggdE9yK2wW4twQiGQ"
     public List<Country> getCountries() {
 
 
-        System.out.println("[bringlabs]-Entered CountryController. ");
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
 
 
 
@@ -41,17 +43,25 @@ eXfWz1xum6G3OQWKW6QggdE9yK2wW4twQiGQ"
     }
 
 
-    // curl -i -X POST "http://localhost:8080/countries" -u root:root -H "Content-Type: application/json" -d '{"id":3,"name":"USA","code":"US","population":300}'
+    // curl -i -X POST "http://localhost:8080/countries"  -H "Authorization: Bearer xxxxxxxxxxx" -H "Content-Type: application/json" -d '{"id":3,"name":"USA","code":"US","population":300}'
     @PostMapping("/countries")
     public List<Country> savecountry(@RequestBody Country country) {
+
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
+
+
         countries.add(country);
         return countries;
     }
 
 
-    //  curl -i -X GET "http://localhost:8080/countries/1" -u root:root
+    //  curl -i -X GET "http://localhost:8080/countries/1" -H "Authorization: Bearer xxxxxxxxxxx"
     @GetMapping("/countries/{id}")
     public ResponseEntity<Country> getCountry(@PathVariable int id) {
+
+        System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
+
+
         Country country = countries.stream()
                 .filter(c -> c.getId() == id)
                 .findFirst()
