@@ -13,6 +13,7 @@
         <module name="security-disable-csrf" />
         <module name="di" />
         <module name="jpa-search-with-jpql" />
+        <module name="security-with-keycloak" />
         <module name="interceptor" />
         <module name="jpa-cmd-runner-curl-fire-CORS" />
         <module name="jpa-search-with-jpaspecification" />
@@ -68,6 +69,7 @@
       <module name="security-user-principal-hdcoded-inmem" options="-parameters" />
       <module name="security-with-jwt-disable-basic-auth" options="-parameters" />
       <module name="security-with-jwt-disable-basic-auth (1)" options="-parameters" />
+      <module name="security-with-keycloak" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>
