@@ -10,10 +10,17 @@ goto confirm
 
 :getMessage
 set /p comment="Enter your commit message: "
-git add .
-git commit -m "%comment%"
-git push
-goto end
+for /f "delims=" %%A in ('git status --porcelain') do echo %%A
+echo These files will be staged for commit.
+set /p proceed="Do you want to continue? (y/n): "
+if /i "%proceed%"=="y" (
+    git add .
+    git commit -m "%comment%"
+    git push
+) else (
+    echo Operation canceled.
+    goto end
+)
 
 :end
 echo Operation complete.
