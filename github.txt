@@ -1,5 +1,0 @@
-These files are saved on 'github' 
-
-
-git add-commit -m 'message'
-git push 
