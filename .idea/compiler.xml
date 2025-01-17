@@ -11,26 +11,28 @@
         <module name="security-custom-creds" />
         <module name="security-jwt-login-staticjwt-w-jwtsvc" />
         <module name="security-disable-csrf" />
+        <module name="security-kc-global-ex-handler" />
         <module name="di" />
         <module name="jpa-search-with-jpql" />
         <module name="security-with-keycloak" />
         <module name="interceptor" />
         <module name="jpa-cmd-runner-curl-fire-CORS" />
         <module name="jpa-search-with-jpaspecification" />
+        <module name="security-jwt-nobasicauth-entry-logs" />
         <module name="hworld" />
         <module name="security-user-principal-bcrypt" />
         <module name="security-user-principal-dbdriven" />
-        <module name="security-with-jwt-disable-basic-auth" />
         <module name="security-default-creds" />
+        <module name="security-w-kc-failure-conn-ex" />
         <module name="security-user-principal-hdcoded-inmem" />
         <module name="security-jwt-login-dyna-jget-jwt" />
         <module name="jpa-insert-data-onstart" />
+        <module name="security-jwt-nobasicauth" />
         <module name="jpa-insert-image-onstart" />
         <module name="security-jwt-login-static-resp-wo-jwtsvc" />
         <module name="security-with-keycloak-failure-resp" />
         <module name="security-csrf" />
         <module name="di-autowire" />
-        <module name="security-with-jwt-disable-basic-auth (1)" />
         <module name="jpa-addl-update-apis" />
         <module name="web-mvc" />
         <module name="jpa-image-add-retrieve" />
@@ -65,11 +67,13 @@
       <module name="security-jwt-login-static-resp-wo-jwtsvc" options="-parameters" />
       <module name="security-jwt-login-staticjwt-w-jwtsvc" options="-parameters" />
       <module name="security-jwt-login-verify-jwt" options="-parameters" />
+      <module name="security-jwt-nobasicauth" options="-parameters" />
+      <module name="security-jwt-nobasicauth-entry-logs" options="-parameters" />
+      <module name="security-kc-global-ex-handler" options="-parameters" />
       <module name="security-user-principal-bcrypt" options="-parameters" />
       <module name="security-user-principal-dbdriven" options="-parameters" />
       <module name="security-user-principal-hdcoded-inmem" options="-parameters" />
-      <module name="security-with-jwt-disable-basic-auth" options="-parameters" />
-      <module name="security-with-jwt-disable-basic-auth (1)" options="-parameters" />
+      <module name="security-w-kc-failure-conn-ex" options="-parameters" />
       <module name="security-with-keycloak" options="-parameters" />
       <module name="security-with-keycloak-failure-resp" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
