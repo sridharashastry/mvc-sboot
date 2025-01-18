@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @RestController
 public class CountryController {
@@ -40,16 +41,19 @@ Using the Token fetch secured resource
 
 
 
+
     @GetMapping("/countries")
     public List<Country> getCountries() {
-
-
         System.out.println("\n [BringLabs] Entered (class.method) : " + this.getClass().getSimpleName() + "." + new Object(){}.getClass().getEnclosingMethod().getName()+"\n");
 
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(10); // Generates a number from 0 to 9
 
+        if (randomNumber % 2 == 0) {
+            throw new RuntimeException("Intentionally raising Exception: Random even number less than 10 encountered: " + randomNumber);
+        }
 
         return countries;
-
     }
 
 
