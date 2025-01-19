@@ -1,12 +1,27 @@
 @echo off
 setlocal
 
-:confirm
-set /p confirm="Do you want to proceed with git add and push? (y/n): "
-if /i "%confirm%"=="y" goto getMessage
-if /i "%confirm%"=="n" goto end
+:deleteJars
+echo Listing .jar files to be deleted:
+for /r %%F in (*.jar) do echo %%F
+
+set /p deleteConfirm="Do you want to delete all these .jar files recursively? (y/n): "
+if /i "%deleteConfirm%"=="y" (
+    for /r %%F in (*.jar) do (
+        echo Deleting: %%F
+        del "%%F"
+    )
+    echo All .jar files deleted.
+) else (
+    echo Skipping deletion of .jar files.
+)
+
+:confirmGit
+set /p confirmGit="Do you want to proceed with git add and push? (y/n): "
+if /i "%confirmGit%"=="y" goto getMessage
+if /i "%confirmGit%"=="n" goto end
 echo Invalid input. Please enter 'y' or 'n'.
-goto confirm
+goto confirmGit
 
 :getMessage
 set /p comment="Enter your commit message: "

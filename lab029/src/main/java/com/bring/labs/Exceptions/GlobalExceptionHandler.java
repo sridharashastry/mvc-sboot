@@ -1,4 +1,4 @@
-package com.bring.labs.Filters;
+package com.bring.labs.Exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
