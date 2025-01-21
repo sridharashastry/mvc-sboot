@@ -37,6 +37,17 @@
         <module name="web-mvc" />
         <module name="jpa-image-add-retrieve" />
         <module name="security-jwt-login-verify-jwt" />
+        <module name="jpa-transaction-read-uncommitted" />
+      </profile>
+      <profile name="Annotation profile for springcloud" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="springcloud-mongodb-superlight" />
+        <module name="springcloud-mdb-products-store" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -58,6 +69,7 @@
       <module name="jpa-insert-image-onstart" options="-parameters" />
       <module name="jpa-search-with-jpaspecification" options="-parameters" />
       <module name="jpa-search-with-jpql" options="-parameters" />
+      <module name="jpa-transaction-read-uncommitted" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
       <module name="security-csrf" options="-parameters" />
       <module name="security-custom-creds" options="-parameters" />
@@ -77,6 +89,8 @@
       <module name="security-with-keycloak" options="-parameters" />
       <module name="security-with-keycloak-failure-resp" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
+      <module name="springcloud-mdb-products-store" options="-parameters" />
+      <module name="springcloud-mongodb-superlight" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>
   </component>
