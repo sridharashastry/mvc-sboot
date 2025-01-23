@@ -48,6 +48,7 @@
         </processorPath>
         <module name="springcloud-mongodb-superlight" />
         <module name="springcloud-mdb-products-store" />
+        <module name="springcoud-mdb-products-testcases" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -91,6 +92,7 @@
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
       <module name="springcloud-mdb-products-store" options="-parameters" />
       <module name="springcloud-mongodb-superlight" options="-parameters" />
+      <module name="springcoud-mdb-products-testcases" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>
   </component>
