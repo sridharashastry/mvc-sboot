@@ -31,6 +31,7 @@
         <module name="jpa-insert-image-onstart" />
         <module name="security-jwt-login-static-resp-wo-jwtsvc" />
         <module name="security-with-keycloak-failure-resp" />
+        <module name="springcoud-mdb-products-intg-tests" />
         <module name="security-csrf" />
         <module name="di-autowire" />
         <module name="jpa-addl-update-apis" />
@@ -47,7 +48,6 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="springcloud-mongodb-superlight" />
-        <module name="springcoud-mdb-products-intg-tests" />
         <module name="springcloud-mdb-products-store" />
       </profile>
     </annotationProcessing>
@@ -93,7 +93,7 @@
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
       <module name="springcloud-mdb-products-store" options="-parameters" />
       <module name="springcloud-mongodb-superlight" options="-parameters" />
-      <module name="springcoud-mdb-products-intg-tests" options="-parameters" />
+      <module name="springcoud-mdb-products-intg-tests" options="" />
       <module name="springcoud-mdb-products-testcases" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>
