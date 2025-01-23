@@ -47,13 +47,14 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="springcloud-mongodb-superlight" />
+        <module name="springcoud-mdb-products-intg-tests" />
         <module name="springcloud-mdb-products-store" />
-        <module name="springcoud-mdb-products-testcases" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="lab001-DI" target="17" />
       <module name="spring-sec-user-principal-h2db" target="17" />
+      <module name="springcoud-mdb-products-testcases" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -92,6 +93,7 @@
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
       <module name="springcloud-mdb-products-store" options="-parameters" />
       <module name="springcloud-mongodb-superlight" options="-parameters" />
+      <module name="springcoud-mdb-products-intg-tests" options="-parameters" />
       <module name="springcoud-mdb-products-testcases" options="-parameters" />
       <module name="web-mvc" options="-parameters" />
     </option>

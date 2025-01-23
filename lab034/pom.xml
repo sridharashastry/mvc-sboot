@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bring</groupId>
-	<artifactId>springcoud-mdb-products-testcases</artifactId>
+	<artifactId>springcoud-mdb-products-intg-tests</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springcloud</name>
-	<description>springcoud-mdb-products-testcases</description>
+	<description>springcoud-mdb-products-intg-tests</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -39,10 +39,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-
-
-
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -53,16 +49,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-
-
-
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<scope>test</scope>
-		</dependency>
-
 	</dependencies>
 
 	<build>

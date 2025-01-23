@@ -24,7 +24,6 @@ public class ProductController {
 
     //curl -i -X POST http://localhost:8080/api/product -H "Content-Type: application/json" -d '{"name": "Jacket", "description": "FilaJacket", "price": 10.99}'
 
-
     //curl -i -X POST http://localhost:8080/api/product -H "Content-Type: application/json" -d '{"name": "Phone", "description": "IPhone", "price": 110.99}'
 
     @PostMapping
