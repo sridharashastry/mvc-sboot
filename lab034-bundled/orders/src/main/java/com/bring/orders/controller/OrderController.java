@@ -15,6 +15,19 @@ public class OrderController {
 
 
     private final OrderService orderService;
+
+    /*
+
+    Curl to load the data in mysql. Ensure database mysql is started
+
+
+curl -X POST http://localhost:8081/api/order -H "Content-Type: application/json" -d '{"orderLineItemDtoList":[{"skuCode":"SKU123","price":100.5,"quantity":2},{"skuCode":"SKU124","price":200.75,"quantity":1}]}'
+
+curl -X POST http://localhost:8081/api/order -H "Content-Type: application/json" -d '{"orderLineItemDtoList":[{"skuCode":"SKU125","price":300.5,"quantity":21},{"skuCode":"SKU126","price":400.75,"quantity":11}]}'
+
+
+
+     */
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public String placeOrder(@RequestBody OrderRequest orderRequest){
@@ -24,5 +37,5 @@ public class OrderController {
 }
 
 
-add create table in schema.sql
+//add create database in schema.sql
 

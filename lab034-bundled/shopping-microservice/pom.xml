@@ -1,0 +1,15 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.bring</groupId>
+  <artifactId>shopping-microservice</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Archetype - shopping-microservice</name>
+  <url>http://maven.apache.org</url>
+  <modules>
+    <module>order-service</module>
+    <module>inventory-service</module>
+    <module>products-service</module>
+  </modules>
+</project>
