@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5cdd075-290b-4d68-aa30-f78582916899" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Steps to create multi module pom.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/src/main/java/com/bring/products/SpringcloudApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/src/main/java/com/bring/products/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/src/main/java/com/bring/products/dto/ProductRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/src/main/java/com/bring/products/dto/ProductResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/src/main/java/com/bring/products/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/src/main/java/com/bring/products/repo/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/src/main/java/com/bring/products/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products-service/src/test/java/com/bring/products/SpringcloudApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab034-bundled/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab034-bundled/.idea/compiler.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b5cdd075-290b-4d68-aa30-f78582916899" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

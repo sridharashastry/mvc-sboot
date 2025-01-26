@@ -37,5 +37,15 @@
     <file url="file://$PROJECT_DIR$/lab033/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab033/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab034/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab035-shoping/inventory-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab035-shoping/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab035-shoping/products-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab035-shoping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab035-shoping/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab036-shopping/inventory-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab036-shopping/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab036-shopping/products-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab036-shopping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab036-shopping/src/main/resources" charset="UTF-8" />
   </component>
 </project>

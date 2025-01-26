@@ -12,7 +12,7 @@
 
 
   <groupId>org.bring</groupId>
-  <artifactId>lab035-shoping</artifactId>
+  <artifactId>shopping-parent-child-modules</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Archetype - lab035-shoping</name>
