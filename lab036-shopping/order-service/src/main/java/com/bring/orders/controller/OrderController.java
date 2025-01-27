@@ -30,15 +30,33 @@ public class OrderController {
     @GetMapping
     @ResponseStatus(HttpStatus.CREATED)
     public List<Order> placeOrder(){
+
+        List<Order> Orders = orderService.getAllOrders();
+        for (Order item : Orders) {
+            System.out.println(item);
+        }
+
+
        return orderService.getAllOrders();
 
     }
 
 
 
+
+
+
+
+
+
     /*
 
-    Curl to load the data in mysql. Ensure database mysql is started
+    Curl to load the data in mysql.
+    Ensure database mysql is started.
+    Ensure that the database is available.
+    Name used for this microservice is : order_service (case sensitive)
+
+
 
 
 BELOW CURL WILL RESULT IN FAILURE
