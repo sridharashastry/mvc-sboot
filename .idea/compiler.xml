@@ -40,7 +40,7 @@
         <module name="security-jwt-login-verify-jwt" />
         <module name="jpa-transaction-read-uncommitted" />
       </profile>
-      <profile name="Annotation profile for Archetype - lab036-shopping" enabled="true">
+      <profile name="Annotation profile for Archetype - lab037-shopping" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -48,11 +48,14 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="products-service" />
+        <module name="inventory-service3" />
         <module name="inventory-service2" />
         <module name="inventory-service" />
         <module name="springcloud-mongodb-superlight" />
         <module name="products-service2" />
         <module name="order-service" />
+        <module name="products-service3" />
+        <module name="order-service3" />
         <module name="springcloud-mdb-products-store" />
         <module name="order-service2" />
       </profile>
@@ -72,6 +75,7 @@
       <module name="interceptor" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
       <module name="inventory-service2" options="-parameters" />
+      <module name="inventory-service3" options="-parameters" />
       <module name="jpa-addl-update-apis" options="-parameters" />
       <module name="jpa-cmd-runner-curl-fire-CORS" options="-parameters" />
       <module name="jpa-image-add-retrieve" options="-parameters" />
@@ -83,8 +87,10 @@
       <module name="lab001-DI" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="order-service2" options="-parameters" />
+      <module name="order-service3" options="-parameters" />
       <module name="products-service" options="-parameters" />
       <module name="products-service2" options="-parameters" />
+      <module name="products-service3" options="-parameters" />
       <module name="security-csrf" options="-parameters" />
       <module name="security-custom-creds" options="-parameters" />
       <module name="security-default-creds" options="-parameters" />
@@ -103,6 +109,7 @@
       <module name="security-with-keycloak" options="-parameters" />
       <module name="security-with-keycloak-failure-resp" options="-parameters" />
       <module name="shopping-intersvc-comm" options="-parameters" />
+      <module name="shopping-intersvc-comm2" options="-parameters" />
       <module name="shopping-parent-child-modules" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
       <module name="springcloud-mdb-products-store" options="-parameters" />
