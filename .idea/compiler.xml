@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/lab038-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab039-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -42,19 +43,22 @@
         <module name="security-jwt-login-verify-jwt" />
         <module name="jpa-transaction-read-uncommitted" />
       </profile>
-      <profile name="Annotation profile for Archetype - lab038-shopping" enabled="true">
+      <profile name="Annotation profile for Archetype - lab039-shopping" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
+        <module name="discovery-service5" />
         <module name="springcloud-mongodb-superlight" />
+        <module name="inventory-service5" />
+        <module name="order-service5" />
         <module name="inventory-service4" />
         <module name="order-service4" />
+        <module name="discovery-service" />
         <module name="springcoud-mdb-products-intg-tests" />
         <module name="order-service3" />
-        <module name="discovery-service" />
         <module name="springcloud-mdb-products-store" />
         <module name="order-service2" />
         <module name="inventory-service3" />
@@ -62,6 +66,7 @@
         <module name="inventory-service2" />
         <module name="inventory-service" />
         <module name="products-service4" />
+        <module name="products-service5" />
         <module name="products-service2" />
         <module name="order-service" />
         <module name="products-service3" />
@@ -78,6 +83,7 @@
       <module name="di" options="-parameters" />
       <module name="di-autowire" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="discovery-service5" options="-parameters" />
       <module name="hworld" options="-parameters" />
       <module name="hworld-web" options="-parameters" />
       <module name="interceptor" options="-parameters" />
@@ -85,6 +91,7 @@
       <module name="inventory-service2" options="-parameters" />
       <module name="inventory-service3" options="-parameters" />
       <module name="inventory-service4" options="-parameters" />
+      <module name="inventory-service5" options="-parameters" />
       <module name="jpa-addl-update-apis" options="-parameters" />
       <module name="jpa-cmd-runner-curl-fire-CORS" options="-parameters" />
       <module name="jpa-image-add-retrieve" options="-parameters" />
@@ -98,10 +105,12 @@
       <module name="order-service2" options="-parameters" />
       <module name="order-service3" options="-parameters" />
       <module name="order-service4" options="-parameters" />
+      <module name="order-service5" options="-parameters" />
       <module name="products-service" options="-parameters" />
       <module name="products-service2" options="-parameters" />
       <module name="products-service3" options="-parameters" />
       <module name="products-service4" options="-parameters" />
+      <module name="products-service5" options="-parameters" />
       <module name="security-csrf" options="-parameters" />
       <module name="security-custom-creds" options="-parameters" />
       <module name="security-default-creds" options="-parameters" />
@@ -119,6 +128,7 @@
       <module name="security-w-kc-failure-conn-ex" options="-parameters" />
       <module name="security-with-keycloak" options="-parameters" />
       <module name="security-with-keycloak-failure-resp" options="-parameters" />
+      <module name="shopping-eureka-multi-svc-inst" options="-parameters" />
       <module name="shopping-eureka-svc-discovery" options="-parameters" />
       <module name="shopping-intersvc-comm" options="-parameters" />
       <module name="shopping-intersvc-comm2" options="-parameters" />

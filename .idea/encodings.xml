@@ -58,5 +58,11 @@
     <file url="file://$PROJECT_DIR$/lab038-shopping/products-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab038-shopping/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab038-shopping/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab039-shopping/discovery-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab039-shopping/inventory-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab039-shopping/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab039-shopping/products-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab039-shopping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab039-shopping/src/main/resources" charset="UTF-8" />
   </component>
 </project>

@@ -24,3 +24,5 @@ Refer Screenshot
     first discover-service
     followed by others
 
+7. If we try to build the parent pom directly, we will encounter some issues during build time, while the build will be successful.
+
