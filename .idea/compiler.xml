@@ -64,9 +64,9 @@
         <module name="products-service3" />
         <module name="springcloud-apigw" />
         <module name="discovery-service5" />
-        <module name="discovery-service-spcl-gw" />
         <module name="inventory-service5" />
         <module name="order-service5" />
+        <module name="discovery-service-spcl-gw" />
         <module name="inventory-service4" />
         <module name="order-service4" />
         <module name="springcoud-mdb-products-intg-tests" />

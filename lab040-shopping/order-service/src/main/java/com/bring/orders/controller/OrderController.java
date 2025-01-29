@@ -23,7 +23,8 @@ public class OrderController {
 
 
 
-    //   curl -X GET "http://localhost:8081/api/order"
+    //   curl -X GET "http://localhost:8080/api/order"   (via api gateway)
+    //   curl -X GET "http://localhost:<dynamic-port>/api/order"   (direct but via dynamic port)
 
 
 
