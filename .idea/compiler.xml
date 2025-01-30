@@ -6,6 +6,8 @@
       <directory url="file://$PROJECT_DIR$/lab039-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lab040-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lab040-shopping/springcloud-apigw/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab041-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab041-shopping/springcloud-apigw/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -57,16 +59,20 @@
         <module name="order-service-spcl-gw" />
         <module name="springcloud-mdb-products-store" />
         <module name="products-service" />
+        <module name="discovery-service-spcl-gw-kc" />
         <module name="inventory-service" />
         <module name="products-service4" />
         <module name="products-service5" />
         <module name="products-service2" />
         <module name="products-service3" />
         <module name="springcloud-apigw" />
+        <module name="springcloud-apigw-kc" />
         <module name="discovery-service5" />
+        <module name="inventory-service-spcl-gw-kc" />
+        <module name="products-service-spcl-gw-kc" />
+        <module name="discovery-service-spcl-gw" />
         <module name="inventory-service5" />
         <module name="order-service5" />
-        <module name="discovery-service-spcl-gw" />
         <module name="inventory-service4" />
         <module name="order-service4" />
         <module name="springcoud-mdb-products-intg-tests" />
@@ -74,6 +80,7 @@
         <module name="order-service2" />
         <module name="inventory-service3" />
         <module name="inventory-service2" />
+        <module name="order-service-spcl-gw-kc" />
         <module name="order-service" />
         <module name="products-service-spcl-gw" />
         <module name="inventory-service-spcl-gw" />
@@ -96,6 +103,7 @@
       <module name="di-autowire" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
       <module name="discovery-service-spcl-gw" options="-parameters" />
+      <module name="discovery-service-spcl-gw-kc" options="-parameters" />
       <module name="discovery-service5" options="-parameters" />
       <module name="discovery-service6" options="-parameters" />
       <module name="hworld" options="-parameters" />
@@ -103,6 +111,7 @@
       <module name="interceptor" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
       <module name="inventory-service-spcl-gw" options="-parameters" />
+      <module name="inventory-service-spcl-gw-kc" options="-parameters" />
       <module name="inventory-service2" options="-parameters" />
       <module name="inventory-service3" options="-parameters" />
       <module name="inventory-service4" options="-parameters" />
@@ -119,6 +128,7 @@
       <module name="lab001-DI" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="order-service-spcl-gw" options="-parameters" />
+      <module name="order-service-spcl-gw-kc" options="-parameters" />
       <module name="order-service2" options="-parameters" />
       <module name="order-service3" options="-parameters" />
       <module name="order-service4" options="-parameters" />
@@ -126,6 +136,7 @@
       <module name="order-service6" options="-parameters" />
       <module name="products-service" options="-parameters" />
       <module name="products-service-spcl-gw" options="-parameters" />
+      <module name="products-service-spcl-gw-kc" options="-parameters" />
       <module name="products-service2" options="-parameters" />
       <module name="products-service3" options="-parameters" />
       <module name="products-service4" options="-parameters" />
@@ -148,6 +159,7 @@
       <module name="security-w-kc-failure-conn-ex" options="-parameters" />
       <module name="security-with-keycloak" options="-parameters" />
       <module name="security-with-keycloak-failure-resp" options="-parameters" />
+      <module name="shopping-agw-kc" options="-parameters" />
       <module name="shopping-eureka-apigw" options="-parameters" />
       <module name="shopping-eureka-multi-svc-inst" options="-parameters" />
       <module name="shopping-eureka-svc-discovery" options="-parameters" />
@@ -157,6 +169,7 @@
       <module name="shopping-spring-apigw-basic-routing" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
       <module name="springcloud-apigw" options="-parameters" />
+      <module name="springcloud-apigw-kc" options="-parameters" />
       <module name="springcloud-mdb-products-store" options="-parameters" />
       <module name="springcloud-mongodb-superlight" options="-parameters" />
       <module name="springcoud-mdb-products-intg-tests" options="-parameters" />
