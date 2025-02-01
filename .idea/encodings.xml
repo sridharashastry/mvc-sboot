@@ -78,5 +78,12 @@
     <file url="file://$PROJECT_DIR$/lab041-shopping/springcloud-apigw/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab041-shopping/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lab041-shopping/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab042-shopping/discovery-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab042-shopping/gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab042-shopping/inventory-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab042-shopping/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab042-shopping/products-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab042-shopping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lab042-shopping/src/main/resources" charset="UTF-8" />
   </component>
 </project>
