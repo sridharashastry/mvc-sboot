@@ -10,6 +10,8 @@
       <directory url="file://$PROJECT_DIR$/lab041-shopping/springcloud-apigw/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lab042-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lab042-shopping/gateway-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab043-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab043-shopping/gateway-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -49,7 +51,7 @@
         <module name="security-jwt-login-verify-jwt" />
         <module name="jpa-transaction-read-uncommitted" />
       </profile>
-      <profile name="Annotation profile for Archetype - lab040-shopping" enabled="true">
+      <profile name="Annotation profile for Archetype - lab043-shopping" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -57,20 +59,24 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="products-service-spcl-gw-kc-cb" />
+        <module name="products-service-gw-kc-cb-delay" />
         <module name="springcloud-mongodb-superlight" />
         <module name="springcloud-apigw-kc-cb" />
         <module name="discovery-service" />
         <module name="order-service-spcl-gw" />
         <module name="springcloud-mdb-products-store" />
-        <module name="products-service" />
         <module name="discovery-service-spcl-gw-kc" />
+        <module name="products-service" />
         <module name="inventory-service" />
         <module name="products-service4" />
         <module name="products-service5" />
         <module name="products-service2" />
-        <module name="products-service3" />
         <module name="discovery-service-spcl-gw-kc-cb" />
+        <module name="products-service3" />
         <module name="inventory-service-spcl-gw-kc-cb" />
+        <module name="discovery-service-gw-kc-cb-delay" />
+        <module name="order-service-gw-kc-cb-delay" />
+        <module name="inventory-service-gw-kc-cb-delay" />
         <module name="springcloud-apigw" />
         <module name="springcloud-apigw-kc" />
         <module name="discovery-service5" />
@@ -88,6 +94,7 @@
         <module name="inventory-service2" />
         <module name="order-service-spcl-gw-kc-cb" />
         <module name="order-service-spcl-gw-kc" />
+        <module name="springcloud-gw-kc-cb-delay" />
         <module name="order-service" />
         <module name="products-service-spcl-gw" />
         <module name="inventory-service-spcl-gw" />
@@ -109,6 +116,7 @@
       <module name="di" options="-parameters" />
       <module name="di-autowire" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="discovery-service-gw-kc-cb-delay" options="-parameters" />
       <module name="discovery-service-spcl-gw" options="-parameters" />
       <module name="discovery-service-spcl-gw-kc" options="-parameters" />
       <module name="discovery-service-spcl-gw-kc-cb" options="-parameters" />
@@ -118,6 +126,7 @@
       <module name="hworld-web" options="-parameters" />
       <module name="interceptor" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
+      <module name="inventory-service-gw-kc-cb-delay" options="-parameters" />
       <module name="inventory-service-spcl-gw" options="-parameters" />
       <module name="inventory-service-spcl-gw-kc" options="-parameters" />
       <module name="inventory-service-spcl-gw-kc-cb" options="-parameters" />
@@ -136,6 +145,7 @@
       <module name="jpa-transaction-read-uncommitted" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
       <module name="order-service" options="-parameters" />
+      <module name="order-service-gw-kc-cb-delay" options="-parameters" />
       <module name="order-service-spcl-gw" options="-parameters" />
       <module name="order-service-spcl-gw-kc" options="-parameters" />
       <module name="order-service-spcl-gw-kc-cb" options="-parameters" />
@@ -145,6 +155,7 @@
       <module name="order-service5" options="-parameters" />
       <module name="order-service6" options="-parameters" />
       <module name="products-service" options="-parameters" />
+      <module name="products-service-gw-kc-cb-delay" options="-parameters" />
       <module name="products-service-spcl-gw" options="-parameters" />
       <module name="products-service-spcl-gw-kc" options="-parameters" />
       <module name="products-service-spcl-gw-kc-cb" options="-parameters" />
@@ -171,6 +182,7 @@
       <module name="security-with-keycloak" options="-parameters" />
       <module name="security-with-keycloak-failure-resp" options="-parameters" />
       <module name="shopping-agw-kc" options="-parameters" />
+      <module name="shopping-cb-delay-case" options="-parameters" />
       <module name="shopping-circuit-breaker" options="-parameters" />
       <module name="shopping-eureka-apigw" options="-parameters" />
       <module name="shopping-eureka-multi-svc-inst" options="-parameters" />
@@ -183,6 +195,7 @@
       <module name="springcloud-apigw" options="-parameters" />
       <module name="springcloud-apigw-kc" options="-parameters" />
       <module name="springcloud-apigw-kc-cb" options="-parameters" />
+      <module name="springcloud-gw-kc-cb-delay" options="-parameters" />
       <module name="springcloud-mdb-products-store" options="-parameters" />
       <module name="springcloud-mongodb-superlight" options="-parameters" />
       <module name="springcoud-mdb-products-intg-tests" options="-parameters" />

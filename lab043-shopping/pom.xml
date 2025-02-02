@@ -12,10 +12,10 @@
 
 
   <groupId>org.bring</groupId>
-  <artifactId>shopping-circuit-breaker</artifactId>
+  <artifactId>shopping-cb-delay-case</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Archetype - lab042-shopping</name>
+  <name>Archetype - lab043-shopping</name>
   <url>http://maven.apache.org</url>
   <modules>
     <module>order-service</module>

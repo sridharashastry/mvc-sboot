@@ -1,0 +1,401 @@
+Sequence of invocations to simulate the circuit breaker
+====================================================CURL REQUESTS ON TERMINAL ================================
+
+PS C:\ws> curl -X POST http://localhost:8181/realms/shoping-realm/protocol/openid-connect/token -d client_id=shopping-client1 -d client_secret=KA1TvT76ojagwUqbJazPSs9YnQpwMs2j -d grant_type=client_credentials
+{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBdmlsRDByLXZnUmJ5TVdPeGxsbHNWN09Qd2NjY0R0Z0dDa0xaMVN0cWU4In0.eyJleHAiOjE3Mzg0ODkzMTAsImlhdCI6MTczODQ4OTAxMCwianRpIjoiMzM4YzkzZDAtNzdhYi00ZTcwLWJiNDMtOGYwZmNhZTIzYzMzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zaG9waW5nLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxN2QwMDZiLTYzNmItNGMzOS1hOTA1LWQ3MmY5YmI1NThlMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNob3BwaW5nLWNsaWVudDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXNob3BpbmctcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1zaG9wcGluZy1jbGllbnQxIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJzaG9wcGluZy1jbGllbnQxIn0.w2QHGUG2f0F202bWhmiaylBcLMUYoZNDkXGfTosAw3IN9v7KwkUo-hXrdOdn8oDO_8koAeuPEwjSA_C555d4AKhs_NFk9hH1lTdF2-9qcmdYcVRospw1P70pBErciHvfiLBNuQtlK07FJkCaWKdFk1PwEBWI6yxA6sH2g7gmhLIeJbqi3so7lxbhwSEMWfH_HfvLjr_RytSU96s5CsFOh3yWYJQzFEYrvRiQQX03nKL2OixA9Nh-9xUqdpvdQqUcv46qbBRx8j-_xAVzzKI-Eiux4c9W2AFxlp0PZJ1QSYc_eNCbMcyWMvpmY52KjiW2RrF_coKBnvlzGN52_pMTvQ","expires_in":300,"refresh_expires_in":0,"token_type":"Bearer","not-before-policy":0,"scope":"email profile"}
+PS C:\ws>
+PS C:\ws>
+PS C:\ws>
+PS C:\ws> curl -X POST http://localhost:8080/api/order -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBdmlsRDByLXZnUmJ5TVdPeGxsbHNWN09Qd2NjY0R0Z0dDa0xaMVN0cWU4In0.eyJleHAiOjE3Mzg0ODkzMTAsImlhdCI6MTczODQ4OTAxMCwianRpIjoiMzM4YzkzZDAtNzdhYi00ZTcwLWJiNDMtOGYwZmNhZTIzYzMzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zaG9waW5nLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxN2QwMDZiLTYzNmItNGMzOS1hOTA1LWQ3MmY5YmI1NThlMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNob3BwaW5nLWNsaWVudDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXNob3BpbmctcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1zaG9wcGluZy1jbGllbnQxIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJzaG9wcGluZy1jbGllbnQxIn0.w2QHGUG2f0F202bWhmiaylBcLMUYoZNDkXGfTosAw3IN9v7KwkUo-hXrdOdn8oDO_8koAeuPEwjSA_C555d4AKhs_NFk9hH1lTdF2-9qcmdYcVRospw1P70pBErciHvfiLBNuQtlK07FJkCaWKdFk1PwEBWI6yxA6sH2g7gmhLIeJbqi3so7lxbhwSEMWfH_HfvLjr_RytSU96s5CsFOh3yWYJQzFEYrvRiQQX03nKL2OixA9Nh-9xUqdpvdQqUcv46qbBRx8j-_xAVzzKI-Eiux4c9W2AFxlp0PZJ1QSYc_eNCbMcyWMvpmY52KjiW2RrF_coKBnvlzGN52_pMTvQ" -d '{"orderLineItemDtoList":[{"skuCode":"iphone12","price":100.5,"quantity":2} ]}'
+Order placed successfully: OrderRequest(orderLineItemDtoList=[OrderLineItemDto(id=null, skuCode=iphone12, price=100.5, quantity=2)])
+PS C:\ws> curl -X POST http://localhost:8080/api/order -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBdmlsRDByLXZnUmJ5TVdPeGxsbHNWN09Qd2NjY0R0Z0dDa0xaMVN0cWU4In0.eyJleHAiOjE3Mzg0ODkzMTAsImlhdCI6MTczODQ4OTAxMCwianRpIjoiMzM4YzkzZDAtNzdhYi00ZTcwLWJiNDMtOGYwZmNhZTIzYzMzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zaG9waW5nLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxN2QwMDZiLTYzNmItNGMzOS1hOTA1LWQ3MmY5YmI1NThlMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNob3BwaW5nLWNsaWVudDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXNob3BpbmctcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1zaG9wcGluZy1jbGllbnQxIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJzaG9wcGluZy1jbGllbnQxIn0.w2QHGUG2f0F202bWhmiaylBcLMUYoZNDkXGfTosAw3IN9v7KwkUo-hXrdOdn8oDO_8koAeuPEwjSA_C555d4AKhs_NFk9hH1lTdF2-9qcmdYcVRospw1P70pBErciHvfiLBNuQtlK07FJkCaWKdFk1PwEBWI6yxA6sH2g7gmhLIeJbqi3so7lxbhwSEMWfH_HfvLjr_RytSU96s5CsFOh3yWYJQzFEYrvRiQQX03nKL2OixA9Nh-9xUqdpvdQqUcv46qbBRx8j-_xAVzzKI-Eiux4c9W2AFxlp0PZJ1QSYc_eNCbMcyWMvpmY52KjiW2RrF_coKBnvlzGN52_pMTvQ" -d '{"orderLineItemDtoList":[{"skuCode":"iphone12","price":100.5,"quantity":2} ]}'
+Oops! Target System went down! Try Again!
+PS C:\ws> curl -X POST http://localhost:8080/api/order -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBdmlsRDByLXZnUmJ5TVdPeGxsbHNWN09Qd2NjY0R0Z0dDa0xaMVN0cWU4In0.eyJleHAiOjE3Mzg0ODkzMTAsImlhdCI6MTczODQ4OTAxMCwianRpIjoiMzM4YzkzZDAtNzdhYi00ZTcwLWJiNDMtOGYwZmNhZTIzYzMzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zaG9waW5nLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxN2QwMDZiLTYzNmItNGMzOS1hOTA1LWQ3MmY5YmI1NThlMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNob3BwaW5nLWNsaWVudDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXNob3BpbmctcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1zaG9wcGluZy1jbGllbnQxIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJzaG9wcGluZy1jbGllbnQxIn0.w2QHGUG2f0F202bWhmiaylBcLMUYoZNDkXGfTosAw3IN9v7KwkUo-hXrdOdn8oDO_8koAeuPEwjSA_C555d4AKhs_NFk9hH1lTdF2-9qcmdYcVRospw1P70pBErciHvfiLBNuQtlK07FJkCaWKdFk1PwEBWI6yxA6sH2g7gmhLIeJbqi3so7lxbhwSEMWfH_HfvLjr_RytSU96s5CsFOh3yWYJQzFEYrvRiQQX03nKL2OixA9Nh-9xUqdpvdQqUcv46qbBRx8j-_xAVzzKI-Eiux4c9W2AFxlp0PZJ1QSYc_eNCbMcyWMvpmY52KjiW2RrF_coKBnvlzGN52_pMTvQ" -d '{"orderLineItemDtoList":[{"skuCode":"iphone12","price":100.5,"quantity":2} ]}'
+Oops! Target System went down! Try Again!
+PS C:\ws> curl -X POST http://localhost:8080/api/order -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBdmlsRDByLXZnUmJ5TVdPeGxsbHNWN09Qd2NjY0R0Z0dDa0xaMVN0cWU4In0.eyJleHAiOjE3Mzg0ODkzMTAsImlhdCI6MTczODQ4OTAxMCwianRpIjoiMzM4YzkzZDAtNzdhYi00ZTcwLWJiNDMtOGYwZmNhZTIzYzMzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zaG9waW5nLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxN2QwMDZiLTYzNmItNGMzOS1hOTA1LWQ3MmY5YmI1NThlMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNob3BwaW5nLWNsaWVudDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXNob3BpbmctcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1zaG9wcGluZy1jbGllbnQxIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJzaG9wcGluZy1jbGllbnQxIn0.w2QHGUG2f0F202bWhmiaylBcLMUYoZNDkXGfTosAw3IN9v7KwkUo-hXrdOdn8oDO_8koAeuPEwjSA_C555d4AKhs_NFk9hH1lTdF2-9qcmdYcVRospw1P70pBErciHvfiLBNuQtlK07FJkCaWKdFk1PwEBWI6yxA6sH2g7gmhLIeJbqi3so7lxbhwSEMWfH_HfvLjr_RytSU96s5CsFOh3yWYJQzFEYrvRiQQX03nKL2OixA9Nh-9xUqdpvdQqUcv46qbBRx8j-_xAVzzKI-Eiux4c9W2AFxlp0PZJ1QSYc_eNCbMcyWMvpmY52KjiW2RrF_coKBnvlzGN52_pMTvQ" -d '{"orderLineItemDtoList":[{"skuCode":"iphone12","price":100.5,"quantity":2} ]}'
+Oops! Target System went down! Try Again!
+PS C:\ws> curl -X POST http://localhost:8080/api/order -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBdmlsRDByLXZnUmJ5TVdPeGxsbHNWN09Qd2NjY0R0Z0dDa0xaMVN0cWU4In0.eyJleHAiOjE3Mzg0ODkzMTAsImlhdCI6MTczODQ4OTAxMCwianRpIjoiMzM4YzkzZDAtNzdhYi00ZTcwLWJiNDMtOGYwZmNhZTIzYzMzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zaG9waW5nLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxN2QwMDZiLTYzNmItNGMzOS1hOTA1LWQ3MmY5YmI1NThlMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNob3BwaW5nLWNsaWVudDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXNob3BpbmctcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1zaG9wcGluZy1jbGllbnQxIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJzaG9wcGluZy1jbGllbnQxIn0.w2QHGUG2f0F202bWhmiaylBcLMUYoZNDkXGfTosAw3IN9v7KwkUo-hXrdOdn8oDO_8koAeuPEwjSA_C555d4AKhs_NFk9hH1lTdF2-9qcmdYcVRospw1P70pBErciHvfiLBNuQtlK07FJkCaWKdFk1PwEBWI6yxA6sH2g7gmhLIeJbqi3so7lxbhwSEMWfH_HfvLjr_RytSU96s5CsFOh3yWYJQzFEYrvRiQQX03nKL2OixA9Nh-9xUqdpvdQqUcv46qbBRx8j-_xAVzzKI-Eiux4c9W2AFxlp0PZJ1QSYc_eNCbMcyWMvpmY52KjiW2RrF_coKBnvlzGN52_pMTvQ" -d '{"orderLineItemDtoList":[{"skuCode":"iphone12","price":100.5,"quantity":2} ]}'
+Oops! Target System went down! Try Again!
+PS C:\ws> curl -X POST http://localhost:8080/api/order -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBdmlsRDByLXZnUmJ5TVdPeGxsbHNWN09Qd2NjY0R0Z0dDa0xaMVN0cWU4In0.eyJleHAiOjE3Mzg0ODkzMTAsImlhdCI6MTczODQ4OTAxMCwianRpIjoiMzM4YzkzZDAtNzdhYi00ZTcwLWJiNDMtOGYwZmNhZTIzYzMzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zaG9waW5nLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxN2QwMDZiLTYzNmItNGMzOS1hOTA1LWQ3MmY5YmI1NThlMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNob3BwaW5nLWNsaWVudDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXNob3BpbmctcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1zaG9wcGluZy1jbGllbnQxIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJzaG9wcGluZy1jbGllbnQxIn0.w2QHGUG2f0F202bWhmiaylBcLMUYoZNDkXGfTosAw3IN9v7KwkUo-hXrdOdn8oDO_8koAeuPEwjSA_C555d4AKhs_NFk9hH1lTdF2-9qcmdYcVRospw1P70pBErciHvfiLBNuQtlK07FJkCaWKdFk1PwEBWI6yxA6sH2g7gmhLIeJbqi3so7lxbhwSEMWfH_HfvLjr_RytSU96s5CsFOh3yWYJQzFEYrvRiQQX03nKL2OixA9Nh-9xUqdpvdQqUcv46qbBRx8j-_xAVzzKI-Eiux4c9W2AFxlp0PZJ1QSYc_eNCbMcyWMvpmY52KjiW2RrF_coKBnvlzGN52_pMTvQ" -d '{"orderLineItemDtoList":[{"skuCode":"iphone12","price":100.5,"quantity":2} ]}'
+Oops! Target System went down! Try Again!
+PS C:\ws> curl -X POST http://localhost:8080/api/order -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBdmlsRDByLXZnUmJ5TVdPeGxsbHNWN09Qd2NjY0R0Z0dDa0xaMVN0cWU4In0.eyJleHAiOjE3Mzg0ODkzMTAsImlhdCI6MTczODQ4OTAxMCwianRpIjoiMzM4YzkzZDAtNzdhYi00ZTcwLWJiNDMtOGYwZmNhZTIzYzMzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zaG9waW5nLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxN2QwMDZiLTYzNmItNGMzOS1hOTA1LWQ3MmY5YmI1NThlMiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNob3BwaW5nLWNsaWVudDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXNob3BpbmctcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1zaG9wcGluZy1jbGllbnQxIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJzaG9wcGluZy1jbGllbnQxIn0.w2QHGUG2f0F202bWhmiaylBcLMUYoZNDkXGfTosAw3IN9v7KwkUo-hXrdOdn8oDO_8koAeuPEwjSA_C555d4AKhs_NFk9hH1lTdF2-9qcmdYcVRospw1P70pBErciHvfiLBNuQtlK07FJkCaWKdFk1PwEBWI6yxA6sH2g7gmhLIeJbqi3so7lxbhwSEMWfH_HfvLjr_RytSU96s5CsFOh3yWYJQzFEYrvRiQQX03nKL2OixA9Nh-9xUqdpvdQqUcv46qbBRx8j-_xAVzzKI-Eiux4c9W2AFxlp0PZJ1QSYc_eNCbMcyWMvpmY52KjiW2RrF_coKBnvlzGN52_pMTvQ" -d '{"orderLineItemDtoList":[{"skuCode":"iphone12","price":100.5,"quantity":2} ]}'
+Oops! Target System went down! Try Again!
+PS C:\ws>
+
+
+
+
+
+
+============================================CORRESPONDING LOG STATEMENTS ON IDE ==========================================
+
+2025-02-02T09:34:15.675Z  INFO 11384 --- [orders-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Attempting to place order: OrderRequest(orderLineItemDtoList=[OrderLineItemDto(id=null, skuCode=iphone12, price=100.5, quantity=2)])
+Inside the placeOrder method
+SKU Code: iphone12
+Price: 100.5
+Quantity: 2
+-----------------------------
+2025-02-02T09:37:30.241Z DEBUG 11384 --- [orders-service] [o-auto-1-exec-3] org.hibernate.SQL                        : select next_val as id_val from t_order_seq for update
+2025-02-02T09:37:30.254Z DEBUG 11384 --- [orders-service] [o-auto-1-exec-3] org.hibernate.SQL                        : update t_order_seq set next_val= ? where next_val=?
+2025-02-02T09:37:30.351Z DEBUG 11384 --- [orders-service] [o-auto-1-exec-3] org.hibernate.SQL                        : select next_val as id_val from t_order_items_seq for update
+2025-02-02T09:37:30.360Z DEBUG 11384 --- [orders-service] [o-auto-1-exec-3] org.hibernate.SQL                        : update t_order_items_seq set next_val= ? where next_val=?
+2025-02-02T09:37:30.423Z DEBUG 11384 --- [orders-service] [o-auto-1-exec-3] org.hibernate.SQL                        : insert into t_order (order_number,id) values (?,?)
+2025-02-02T09:37:30.442Z DEBUG 11384 --- [orders-service] [o-auto-1-exec-3] org.hibernate.SQL                        : insert into t_order_items (price,quantity,sku_code,id) values (?,?,?,?)
+2025-02-02T09:37:30.454Z DEBUG 11384 --- [orders-service] [o-auto-1-exec-3] org.hibernate.SQL                        : insert into t_order_order_line_item_list (order_id,order_line_item_list_id) values (?,?)
+Order placed successfully: OrderRequest(orderLineItemDtoList=[OrderLineItemDto(id=null, skuCode=iphone12, price=100.5, quantity=2)])
+Attempting to place order: OrderRequest(orderLineItemDtoList=[OrderLineItemDto(id=null, skuCode=iphone12, price=100.5, quantity=2)])
+Inside the placeOrder method 
+SKU Code: iphone12
+Price: 100.5
+Quantity: 2
+-----------------------------
+Fallback triggered! Target system is down. Exception: Connection refused: no further information: localhost/127.0.0.1:51803
+Attempting to place order: OrderRequest(orderLineItemDtoList=[OrderLineItemDto(id=null, skuCode=iphone12, price=100.5, quantity=2)])
+Inside the placeOrder method
+SKU Code: iphone12
+Price: 100.5
+Quantity: 2
+-----------------------------
+Fallback triggered! Target system is down. Exception: Connection refused: no further information: localhost/127.0.0.1:51803
+Attempting to place order: OrderRequest(orderLineItemDtoList=[OrderLineItemDto(id=null, skuCode=iphone12, price=100.5, quantity=2)])
+Inside the placeOrder method
+SKU Code: iphone12
+Price: 100.5
+Quantity: 2
+-----------------------------
+Fallback triggered! Target system is down. Exception: Connection refused: no further information: localhost/127.0.0.1:51803
+Fallback triggered! Target system is down. Exception: CircuitBreaker 'inventory' is OPEN and does not permit further calls
+Fallback triggered! Target system is down. Exception: CircuitBreaker 'inventory' is OPEN and does not permit further calls
+Fallback triggered! Target system is down. Exception: CircuitBreaker 'inventory' is OPEN and does not permit further calls
+2025-02-02T09:39:15.687Z  INFO 11384 --- [orders-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+
+
+
+=====================================================HEALTH INDICATORS BEFORE BRINGING DOWN THE INVENTORY SERVICE ===========================NOTICE 'state": "CLOSED" =================
+
+{
+  "status": "UP",
+  "components": {
+    "circuitBreakers": {
+      "status": "UP",
+      "details": {
+        "inventory": {
+          "status": "UP",
+          "details": {
+            "failureRate": "-1.0%",
+            "failureRateThreshold": "100.0%",
+            "slowCallRate": "-1.0%",
+            "slowCallRateThreshold": "100.0%",
+            "bufferedCalls": 0,
+            "slowCalls": 0,
+            "slowFailedCalls": 0,
+            "failedCalls": 0,
+            "notPermittedCalls": 0,
+            "state": "CLOSED"
+          }
+        }
+      }
+    },
+    "db": {
+      "status": "UP",
+      "details": {
+        "database": "MySQL",
+        "validationQuery": "isValid()"
+      }
+    },
+    "discoveryComposite": {
+      "status": "UP",
+      "components": {
+        "discoveryClient": {
+          "status": "UP",
+          "details": {
+            "services": [
+              "springcloud-apigw",
+              "inventory-service",
+              "products-service",
+              "orders-service"
+            ]
+          }
+        },
+        "eureka": {
+          "description": "Remote status from Eureka server",
+          "status": "UP",
+          "details": {
+            "applications": {
+              "SPRINGCLOUD-APIGW": 1,
+              "INVENTORY-SERVICE": 1,
+              "ORDERS-SERVICE": 1,
+              "PRODUCTS-SERVICE": 1
+            }
+          }
+        }
+      }
+    },
+    "diskSpace": {
+      "status": "UP",
+      "details": {
+        "total": 510761775104,
+        "free": 116966498304,
+        "threshold": 10485760,
+        "path": "C:\\ws\\sboot\\lab042-shopping\\order-service\\.",
+        "exists": true
+      }
+    },
+    "ping": {
+      "status": "UP"
+    },
+    "reactiveDiscoveryClients": {
+      "status": "UP",
+      "components": {
+        "Simple Reactive Discovery Client": {
+          "status": "UP",
+          "details": {
+            "services": []
+          }
+        },
+        "Spring Cloud Eureka Reactive Discovery Client": {
+          "status": "UP",
+          "details": {
+            "services": [
+              "springcloud-apigw",
+              "inventory-service",
+              "products-service",
+              "orders-service"
+            ]
+          }
+        }
+      }
+    },
+    "refreshScope": {
+      "status": "UP"
+    },
+    "ssl": {
+      "status": "UP",
+      "details": {
+        "validChains": [],
+        "invalidChains": []
+      }
+    }
+  }
+}
+
+
+==========================AFTER BRINGING DOWN THE INVENTORY SERVICE SO THAT CB CAN BE TRIGGERED ===================================="state": "OPEN"===================
+ 
+ {
+  "status": "UP",
+  "components": {
+    "circuitBreakers": {
+      "status": "UNKNOWN",
+      "details": {
+        "inventory": {
+          "status": "CIRCUIT_OPEN",
+          "details": {
+            "failureRate": "100.0%",
+            "failureRateThreshold": "100.0%",
+            "slowCallRate": "0.0%",
+            "slowCallRateThreshold": "100.0%",
+            "bufferedCalls": 3,
+            "slowCalls": 0,
+            "slowFailedCalls": 0,
+            "failedCalls": 3,
+            "notPermittedCalls": 2,
+            "state": "OPEN"
+          }
+        }
+      }
+    },
+    "db": {
+      "status": "UP",
+      "details": {
+        "database": "MySQL",
+        "validationQuery": "isValid()"
+      }
+    },
+    "discoveryComposite": {
+      "status": "UP",
+      "components": {
+        "discoveryClient": {
+          "status": "UP",
+          "details": {
+            "services": [
+              "springcloud-apigw",
+              "products-service",
+              "orders-service"
+            ]
+          }
+        },
+        "eureka": {
+          "description": "Remote status from Eureka server",
+          "status": "UP",
+          "details": {
+            "applications": {
+              "SPRINGCLOUD-APIGW": 1,
+              "ORDERS-SERVICE": 1,
+              "PRODUCTS-SERVICE": 1
+            }
+          }
+        }
+      }
+    },
+    "diskSpace": {
+      "status": "UP",
+      "details": {
+        "total": 510761775104,
+        "free": 116968652800,
+        "threshold": 10485760,
+        "path": "C:\\ws\\sboot\\lab042-shopping\\order-service\\.",
+        "exists": true
+      }
+    },
+    "ping": {
+      "status": "UP"
+    },
+    "reactiveDiscoveryClients": {
+      "status": "UP",
+      "components": {
+        "Simple Reactive Discovery Client": {
+          "status": "UP",
+          "details": {
+            "services": []
+          }
+        },
+        "Spring Cloud Eureka Reactive Discovery Client": {
+          "status": "UP",
+          "details": {
+            "services": [
+              "springcloud-apigw",
+              "products-service",
+              "orders-service"
+            ]
+          }
+        }
+      }
+    },
+    "refreshScope": {
+      "status": "UP"
+    },
+    "ssl": {
+      "status": "UP",
+      "details": {
+        "validChains": [],
+        "invalidChains": []
+      }
+    }
+  }
+}
+
+
+
+
+==========================AFTER COOL DOWN PERIOD AND AFTER STARTING THE INVENTORY SERVICE ===================================="state": "HALF_OPEN"===================
+ 
+
+{
+  "status": "UP",
+  "components": {
+    "circuitBreakers": {
+      "status": "UNKNOWN",
+      "details": {
+        "inventory": {
+          "status": "CIRCUIT_HALF_OPEN",
+          "details": {
+            "failureRate": "-1.0%",
+            "failureRateThreshold": "100.0%",
+            "slowCallRate": "-1.0%",
+            "slowCallRateThreshold": "100.0%",
+            "bufferedCalls": 0,
+            "slowCalls": 0,
+            "slowFailedCalls": 0,
+            "failedCalls": 0,
+            "notPermittedCalls": 0,
+            "state": "HALF_OPEN"
+          }
+        }
+      }
+    },
+    "db": {
+      "status": "UP",
+      "details": {
+        "database": "MySQL",
+        "validationQuery": "isValid()"
+      }
+    },
+    "discoveryComposite": {
+      "status": "UP",
+      "components": {
+        "discoveryClient": {
+          "status": "UP",
+          "details": {
+            "services": [
+              "springcloud-apigw",
+              "inventory-service",
+              "orders-service",
+              "products-service"
+            ]
+          }
+        },
+        "eureka": {
+          "description": "Remote status from Eureka server",
+          "status": "UP",
+          "details": {
+            "applications": {
+              "SPRINGCLOUD-APIGW": 1,
+              "INVENTORY-SERVICE": 1,
+              "ORDERS-SERVICE": 1,
+              "PRODUCTS-SERVICE": 1
+            }
+          }
+        }
+      }
+    },
+    "diskSpace": {
+      "status": "UP",
+      "details": {
+        "total": 510761775104,
+        "free": 116959842304,
+        "threshold": 10485760,
+        "path": "C:\\ws\\sboot\\lab042-shopping\\order-service\\.",
+        "exists": true
+      }
+    },
+    "ping": {
+      "status": "UP"
+    },
+    "reactiveDiscoveryClients": {
+      "status": "UP",
+      "components": {
+        "Simple Reactive Discovery Client": {
+          "status": "UP",
+          "details": {
+            "services": []
+          }
+        },
+        "Spring Cloud Eureka Reactive Discovery Client": {
+          "status": "UP",
+          "details": {
+            "services": [
+              "springcloud-apigw",
+              "inventory-service",
+              "orders-service",
+              "products-service"
+            ]
+          }
+        }
+      }
+    },
+    "refreshScope": {
+      "status": "UP"
+    },
+    "ssl": {
+      "status": "UP",
+      "details": {
+        "validChains": [],
+        "invalidChains": []
+      }
+    }
+  }
+}
+
+

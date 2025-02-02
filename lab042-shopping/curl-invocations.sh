@@ -66,7 +66,6 @@ PS C:\ws>
 
  curl -X POST http://localhost:8181/realms/shoping-realm/protocol/openid-connect/token -d client_id=shopping-client1 -d client_secret=KA1TvT76ojagwUqbJazPSs9YnQpwMs2j -d grant_type=client_credentials
 
-{"access_token":"eyJhbGXXXXXa5UVA","expires_in":300,"refresh_expires_in":0,"token_type":"Bearer","not-before-policy":0,"scope":"email profile"}
 
 #USE THE TOKEN  TO GET THE REGISTERED ORDERS
 

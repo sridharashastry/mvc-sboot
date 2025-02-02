@@ -15,7 +15,7 @@
   <artifactId>shopping-agw-kc</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Archetype - lab040-shopping</name>
+  <name>Archetype - lab041-shopping</name>
   <url>http://maven.apache.org</url>
   <modules>
     <module>order-service</module>
