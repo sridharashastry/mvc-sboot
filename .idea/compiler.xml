@@ -16,6 +16,7 @@
       <directory url="file://$PROJECT_DIR$/lab044-shopping/gateway-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lab045-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lab045-shopping/gateway-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab045-shopping/notifications-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -67,6 +68,7 @@
         <module name="springcloud-mongodb-superlight" />
         <module name="order-service-spcl-gw" />
         <module name="springcloud-mdb-products-store" />
+        <module name="notifications-service" />
         <module name="products-service" />
         <module name="inventory-service" />
         <module name="products-service4" />
@@ -164,6 +166,7 @@
       <module name="jpa-search-with-jpql" options="-parameters" />
       <module name="jpa-transaction-read-uncommitted" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
+      <module name="notifications-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="order-service-gw-kc-cb-delay" options="-parameters" />
       <module name="order-service-kafka" options="-parameters" />

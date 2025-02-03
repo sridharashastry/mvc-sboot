@@ -5,11 +5,13 @@ import com.bring.orders.dto.InventoryFullData;
 import com.bring.orders.dto.InventoryResponse;
 import com.bring.orders.dto.OrderLineItemDto;
 import com.bring.orders.dto.OrderRequest;
+import com.bring.orders.events.OrderPlacedEvent;
 import com.bring.orders.models.Order;
 import com.bring.orders.models.OrderLineItem;
 import com.bring.orders.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -30,6 +32,8 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClientBuilder;
 
+
+    private final KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate;
 
 
     public List<Order> getAllOrders(){
@@ -122,6 +126,8 @@ public class OrderService {
 
             System.out.println("[Service] Validated all products in stock. Now saving to database");
             orderRepository.save(order);
+
+            kafkaTemplate.send("notification-topic", new OrderPlacedEvent(order.getOrderNumber()));
             System.out.println("[Service] Order placed successfully !");
 
 
