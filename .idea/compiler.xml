@@ -34,17 +34,20 @@
         <module name="security-with-keycloak" />
         <module name="interceptor" />
         <module name="jpa-cmd-runner-curl-fire-CORS" />
+        <module name="hworld-docker" />
         <module name="jpa-search-with-jpaspecification" />
         <module name="security-jwt-nobasicauth-entry-logs" />
         <module name="hworld" />
         <module name="security-user-principal-bcrypt" />
         <module name="security-user-principal-dbdriven" />
+        <module name="hworld-docker-distroless" />
         <module name="security-default-creds" />
         <module name="security-w-kc-failure-conn-ex" />
         <module name="security-user-principal-hdcoded-inmem" />
         <module name="security-jwt-login-dyna-jget-jwt" />
         <module name="jpa-insert-data-onstart" />
         <module name="security-jwt-nobasicauth" />
+        <module name="hworld-docker-small-image" />
         <module name="jpa-insert-image-onstart" />
         <module name="security-jwt-login-static-resp-wo-jwtsvc" />
         <module name="security-with-keycloak-failure-resp" />
@@ -143,6 +146,9 @@
       <module name="gateway-service-kafka" options="-parameters" />
       <module name="gateway-service-tracing" options="-parameters" />
       <module name="hworld" options="-parameters" />
+      <module name="hworld-docker" options="-parameters" />
+      <module name="hworld-docker-distroless" options="-parameters" />
+      <module name="hworld-docker-small-image" options="-parameters" />
       <module name="hworld-web" options="-parameters" />
       <module name="interceptor" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
