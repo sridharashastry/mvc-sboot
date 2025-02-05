@@ -40,6 +40,7 @@
         <module name="hworld" />
         <module name="security-user-principal-bcrypt" />
         <module name="security-user-principal-dbdriven" />
+        <module name="payments-interface-aop-pointcut" />
         <module name="security-default-creds" />
         <module name="security-w-kc-failure-conn-ex" />
         <module name="security-user-principal-hdcoded-inmem" />
@@ -49,7 +50,10 @@
         <module name="hworld-docker-small-image" />
         <module name="jpa-insert-image-onstart" />
         <module name="security-jwt-login-static-resp-wo-jwtsvc" />
+        <module name="payments-interface" />
+        <module name="payments-interface-aop" />
         <module name="security-with-keycloak-failure-resp" />
+        <module name="payments-aop-pointcut-around" />
         <module name="security-csrf" />
         <module name="di-autowire" />
         <module name="jpa-addl-update-apis" />
@@ -185,6 +189,10 @@
       <module name="order-service4" options="-parameters" />
       <module name="order-service5" options="-parameters" />
       <module name="order-service6" options="-parameters" />
+      <module name="payments-aop-pointcut-around" options="-parameters" />
+      <module name="payments-interface" options="-parameters" />
+      <module name="payments-interface-aop" options="-parameters" />
+      <module name="payments-interface-aop-pointcut" options="-parameters" />
       <module name="products-service" options="-parameters" />
       <module name="products-service-gw-kc-cb-delay" options="-parameters" />
       <module name="products-service-kafka" options="-parameters" />
