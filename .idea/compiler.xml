@@ -40,7 +40,6 @@
         <module name="hworld" />
         <module name="security-user-principal-bcrypt" />
         <module name="security-user-principal-dbdriven" />
-        <module name="hworld-docker-distroless" />
         <module name="security-default-creds" />
         <module name="security-w-kc-failure-conn-ex" />
         <module name="security-user-principal-hdcoded-inmem" />
@@ -121,6 +120,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="discovery-service6" target="17" />
+      <module name="hworld-docker-distroless" target="17" />
       <module name="inventory-service6" target="17" />
       <module name="lab001-DI" target="17" />
       <module name="order-service6" target="17" />
