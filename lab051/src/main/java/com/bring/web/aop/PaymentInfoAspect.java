@@ -13,6 +13,8 @@ import java.util.Date;
 public class PaymentInfoAspect {
 
 
+    // This aspect executes custom logic (e.g., logging) before and after all methods
+    // in the specified package, regardless of their parameters or return types.
 
     @Around("execution(* com.bring.web.controllers.PaymentsController.*(..))")
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
@@ -21,7 +23,7 @@ public class PaymentInfoAspect {
         Object result = joinPoint.proceed();  // Executes the actual method
 
         long duration = System.currentTimeMillis() - start;
-        System.out.println(joinPoint.getSignature() + " executed in " + duration + " ms");
+        System.out.println("Custom AOP : "+joinPoint.getSignature() + " executed in " + duration + " ms");
 
         return result;
     }

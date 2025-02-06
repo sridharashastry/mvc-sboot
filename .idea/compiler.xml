@@ -17,6 +17,12 @@
       <directory url="file://$PROJECT_DIR$/lab045-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lab045-shopping/gateway-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lab045-shopping/notifications-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab045a-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab045a-shopping/gateway-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab045a-shopping/notifications-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab045b-shopping/discovery-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab045b-shopping/gateway-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lab045b-shopping/notifications-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -62,7 +68,7 @@
         <module name="security-jwt-login-verify-jwt" />
         <module name="jpa-transaction-read-uncommitted" />
       </profile>
-      <profile name="Annotation profile for Archetype - lab045-shopping" enabled="true">
+      <profile name="Annotation profile for Archetype - lab045a-shopping" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -79,14 +85,18 @@
         <module name="inventory-service" />
         <module name="products-service4" />
         <module name="order-service-tracing" />
+        <module name="notifications-service-observability" />
         <module name="products-service5" />
+        <module name="products-service-observability" />
         <module name="products-service2" />
         <module name="discovery-service-spcl-gw-kc-cb" />
         <module name="products-service3" />
         <module name="inventory-service-kafka" />
+        <module name="gateway-service-observability" />
         <module name="springcloud-apigw" />
         <module name="products-service-tracing" />
         <module name="springcloud-apigw-kc" />
+        <module name="discovery-service-observability" />
         <module name="order-service-kafka" />
         <module name="inventory-service-spcl-gw-kc" />
         <module name="discovery-service-spcl-gw" />
@@ -94,6 +104,7 @@
         <module name="order-service4" />
         <module name="order-service3" />
         <module name="order-service2" />
+        <module name="inventory-service-observability" />
         <module name="products-service-kafka" />
         <module name="order-service-spcl-gw-kc-cb" />
         <module name="order-service" />
@@ -101,6 +112,7 @@
         <module name="inventory-service-spcl-gw" />
         <module name="products-service-spcl-gw-kc-cb" />
         <module name="gateway-service-kafka" />
+        <module name="order-service-observability" />
         <module name="springcloud-apigw-kc-cb" />
         <module name="discovery-service" />
         <module name="discovery-service-spcl-gw-kc" />
@@ -141,6 +153,7 @@
       <module name="discovery-service" options="-parameters" />
       <module name="discovery-service-gw-kc-cb-delay" options="-parameters" />
       <module name="discovery-service-kafka" options="-parameters" />
+      <module name="discovery-service-observability" options="-parameters" />
       <module name="discovery-service-spcl-gw" options="-parameters" />
       <module name="discovery-service-spcl-gw-kc" options="-parameters" />
       <module name="discovery-service-spcl-gw-kc-cb" options="-parameters" />
@@ -148,6 +161,7 @@
       <module name="discovery-service5" options="-parameters" />
       <module name="discovery-service6" options="-parameters" />
       <module name="gateway-service-kafka" options="-parameters" />
+      <module name="gateway-service-observability" options="-parameters" />
       <module name="gateway-service-tracing" options="-parameters" />
       <module name="hworld" options="-parameters" />
       <module name="hworld-docker" options="-parameters" />
@@ -158,6 +172,7 @@
       <module name="inventory-service" options="-parameters" />
       <module name="inventory-service-gw-kc-cb-delay" options="-parameters" />
       <module name="inventory-service-kafka" options="-parameters" />
+      <module name="inventory-service-observability" options="-parameters" />
       <module name="inventory-service-spcl-gw" options="-parameters" />
       <module name="inventory-service-spcl-gw-kc" options="-parameters" />
       <module name="inventory-service-spcl-gw-kc-cb" options="-parameters" />
@@ -177,9 +192,11 @@
       <module name="jpa-transaction-read-uncommitted" options="-parameters" />
       <module name="lab001-DI" options="-parameters" />
       <module name="notifications-service" options="-parameters" />
+      <module name="notifications-service-observability" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="order-service-gw-kc-cb-delay" options="-parameters" />
       <module name="order-service-kafka" options="-parameters" />
+      <module name="order-service-observability" options="-parameters" />
       <module name="order-service-spcl-gw" options="-parameters" />
       <module name="order-service-spcl-gw-kc" options="-parameters" />
       <module name="order-service-spcl-gw-kc-cb" options="-parameters" />
@@ -196,6 +213,7 @@
       <module name="products-service" options="-parameters" />
       <module name="products-service-gw-kc-cb-delay" options="-parameters" />
       <module name="products-service-kafka" options="-parameters" />
+      <module name="products-service-observability" options="-parameters" />
       <module name="products-service-spcl-gw" options="-parameters" />
       <module name="products-service-spcl-gw-kc" options="-parameters" />
       <module name="products-service-spcl-gw-kc-cb" options="-parameters" />
@@ -232,6 +250,7 @@
       <module name="shopping-intersvc-comm2" options="-parameters" />
       <module name="shopping-kafka-intg" options="-parameters" />
       <module name="shopping-micrometer-tracing" options="-parameters" />
+      <module name="shopping-observability" options="-parameters" />
       <module name="shopping-parent-child-modules" options="-parameters" />
       <module name="shopping-spring-apigw-basic-routing" options="-parameters" />
       <module name="spring-sec-user-principal-h2db" options="-parameters" />
